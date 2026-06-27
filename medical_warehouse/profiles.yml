@@ -1,0 +1,12 @@
+medical_warehouse:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: admin
+      password: password
+      port: 5435
+      dbname: medical_warehouse
+      schema: public # dbt will create its models here
+      threads: 1
