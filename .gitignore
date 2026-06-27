@@ -1,0 +1,13 @@
+# Secrets
+.env
+*.session
+*.session-journal
+
+# Data (We usually don't push raw data to Git)
+data/raw/
+logs/
+
+# Python
+__pycache__/
+venv/
+.vscode/
