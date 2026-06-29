@@ -1,5 +1,7 @@
 SELECT
     {{ dbt_utils.generate_surrogate_key(['message_id', 'channel_name']) }} as message_pk,
+    message_id,         
+    channel_name,         
     CAST(message_date AS DATE) as date_fk,
     {{ dbt_utils.generate_surrogate_key(['channel_name']) }} as channel_fk,
     message_text,
