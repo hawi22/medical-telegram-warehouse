@@ -11,3 +11,6 @@ logs/
 __pycache__/
 venv/
 .vscode/
+# Machine Learning
+yolov8n.pt
+data/*.csv
