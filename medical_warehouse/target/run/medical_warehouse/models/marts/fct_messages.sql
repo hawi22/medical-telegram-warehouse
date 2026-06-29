@@ -10,6 +10,8 @@
   (
     SELECT
     md5(cast(coalesce(cast(message_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(channel_name as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as message_pk,
+    message_id,         
+    channel_name,         
     CAST(message_date AS DATE) as date_fk,
     md5(cast(coalesce(cast(channel_name as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as channel_fk,
     message_text,
